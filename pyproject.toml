@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "camera-record"
+version = "1.2.0"
+description = "Gravação contínua de câmeras IP (RTSP/FFmpeg) com rotação por dias, em systemd de usuário."
+readme = "README.md"
+requires-python = ">=3.8"
+keywords = ["camera", "cftv", "rtsp", "ffmpeg", "systemd", "gravacao"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: No Input/Output (Daemon)",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: Portuguese (Brazilian)",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3",
+    "Topic :: Multimedia :: Video :: Capture",
+    "Topic :: System :: Monitoring",
+]
+dependencies = []
+
+[project.scripts]
+camera-install = "camera_installer:main"
+camera-daemon = "camera_record:main"
+camera-cleaner = "camera_cleaner:main"
+
+[tool.setuptools]
+py-modules = ["camera_common", "camera_record", "camera_cleaner", "camera_installer"]

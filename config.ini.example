@@ -1,0 +1,22 @@
+# Exemplo de configuração do camera-record.
+# O arquivo real fica em: ~/.config/camera-record/config.ini  (criado por 'camera-install')
+# Contém senhas: mantenha a permissão 600 (chmod 600 ~/.config/camera-record/config.ini).
+
+[global]
+configured = 1
+base_dir = /mnt/dmraid/gravacoes
+mount_point = /mnt/dmraid
+descarte = 3
+espaco_minimo_pct = 10
+dir_format = %Y-%m-%d
+segment_time = 60
+audio = off
+
+[cam01_frente]
+url = rtsp://user:senha@10.10.10.1:554/cam/realmonitor?channel=1&subtype=0
+
+[cam02_quintal]
+url = rtsp://user:senha@10.10.10.2:554/cam/realmonitor?channel=1&subtype=0
+
+[cam03_garagem]
+url = rtsp://user:senha@10.10.10.3:554/Streaming/Channels/101

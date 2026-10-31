@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.eggs/
+
+# Ambientes virtuais
+.venv/
+venv/
+myenv/
+env/
+
+# Configuração real (contém senhas das câmeras) e gravações
+config.ini
+!config.ini.example
+gravacoes/
+*.mp4
+
+# Editores / sistema
+.vscode/
+.idea/
+*.swp
+.DS_Store
