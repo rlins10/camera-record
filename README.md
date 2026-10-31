@@ -45,7 +45,7 @@ copiados à mão**: o `camera-install` cria os diretórios e as unidades por voc
 ## Instalação
 
 ```bash
-git clone https://github.com/SEU_USUARIO/camera-record.git
+git clone https://github.com/rlins10/camera-record.git
 cd camera-record
 
 python3 -m venv ~/myenv
@@ -174,7 +174,7 @@ As gravações **nunca** são apagadas pela desinstalação.
 | Sintoma | Causa provável e solução |
 |---|---|
 | `camera-install`: "o systemd de usuário não respondeu" | Sessão sem barramento de usuário (ex.: `su` ou SSH sem sessão). Faça login normal ou rode `export XDG_RUNTIME_DIR=/run/user/$(id -u)` e execute `camera-install` de novo. Os arquivos já foram gravados. |
-| Daemon não sobe após reiniciar o servidor | Falta o linger. Peça a um administrador: `sudo loginctl enable-linger SEU_USUARIO`. |
+| Daemon não sobe após reiniciar o servidor | Falta o linger. Peça a um administrador: `sudo loginctl enable-linger rlins10`. |
 | "serviço desativado (configured = 0)" | Falta `configured = 1` no `[global]`; depois `systemctl --user restart camera-daemon`. |
 | "ERRO de configuração: ..." | A mensagem diz a chave e o valor inválidos. Corrija e reinicie o serviço. |
 | "Aguardando a montagem de ..." | O `mount_point` não está montado. Monte o disco; o daemon continua sozinho. |
