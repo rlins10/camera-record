@@ -5,6 +5,8 @@ estabelecimentos. Usa o FFmpeg para gravar **sem recodificar** (baixo uso de CPU
 inteiramente como **serviço de usuário do systemd**: depois de instalado o FFmpeg, nada neste projeto
 precisa de root.
 
+Diferenciais : 100% user space, baixo consumo de CPU e RAM, usa os recursos do systemd
+
 - **`camera-daemon`**: uma thread por câmera, cada uma com um FFmpeg gravando arquivos de 60 s em uma pasta por dia.
 - **`camera-cleaner`**: apaga as pastas de dias antigos (e, opcionalmente, libera espaço quando o disco enche).
 - **`camera-install`**: cria a configuração, os diretórios do systemd de usuário e os serviços/timer, e já os habilita.
